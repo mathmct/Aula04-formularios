@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Formulário</title>
+</head>
+<body>
+
+    <header>
+        <h1>Formulário Teste</h1>
+    </header>
+    <hr>
+    <main>
+        <!-- Elemento form define um formlário html-->
+        <!-- Atributo "action" especifica para onde os dados do formulário serão enviados-->
+        <form action="acao.html" method="post" enctype="multipart/form-data">
+            <!--
+                Método de envio: GET ou POST
+                o atributo method especifica como os dados do formulario serão enviados
+                - O método GET envia os dados como parâmetros da URL
+                - O método POST envia os dados no corpo da solicitação HTTP
+                Atributo enctype especifica que tipos de dados serão enviados pelo formulário
+            -->
+            <label>Nome: </label>
+            <input type="text" name="name" id="name" required>
+            <!-- Label "etiqueta" o input, ou seja, informa ao usuário qual o campo a ser preenchido-->
+            <!-- Input do tipo texto aceita somente caracteres de texto-->
+            <!-- Atributo required informa que o campo é obrigatório-->
+            <br>
+            <label>Senha: </label>
+            <input type="password" name="password" id="password" required>
+            <!-- Input tipo senha "esconde" o texto para o usuário para aumentar a segurança do dado-->
+            <br>
+            <label>Insira sua imagem: </label>
+            <input type="file" name="file" id="file" accept=".png, .jpg, .jpeg" multiple>
+            <!-- Input tipo file permite a submissão de arquivos por meio do formulario
+            O atributo accept define os tipos de arquivos que podem ser enviados
+            O atributo multiple define que vários arquivos podem ser submetidos pelo seu formulário
+            -->
+            <br>
+            <label>Selecione sua opção: </label>
+            <input type="radio" name="option1" id="option1" value="1" checked>Feminino
+            <input type="radio" name="option1" id="option1" value="2" required>Masculino
+            <!-- Input tipo radio que funciona como uma "lista" de seleção, para cada opção dessa "lista" deve-se colocaro mesmo "name" e "id",
+            o atributo que deve mudar com base na opção é o atributo "value"
+            O atributo checked faz com que a opção venha selecionada no primeiro carregamento do formulário como se fosse um "padrão"-->
+            <br>
+            <label>Selecione suas disciplinas: </label>
+            <input type="checkbox" name="math" id="math" checked>Matemática
+            <input type="checkbox" name="bio" id="bio">Biologia
+            <input type="checkbox" name="geo" id="geo">Geografia
+            <!--Input tipo checkbox funciona de uma maneira semelhante ao radio, só que com a opção de seleção de multiplos dados-->
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+    
+</body>
+</html>
